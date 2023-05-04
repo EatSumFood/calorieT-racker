@@ -4,7 +4,8 @@
     $foodname = $_POST['foodreview'];
     $rating = $_POST['foodrating'];
     $review = $_POST['review'];
-    //for some reason, if the review has a ' or " in it it breaks the query, not sure why.
+    //for some reason, if the review has a ' or ' in it it breaks the query, not sure why.
+    //wouldn't this mean that if a ' and ' is in the review then it also breaks it? assuming this is based on that it is a logical expression
 
     $query = "select ID from food where name = '$foodname'";
 
